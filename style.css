@@ -1,17 +1,18 @@
+/*CSS = “what it looks like” (colors, spacing) */
 body {
-    font-family: Arial;
-    text-align: center;
-    background-color: #f5f5f5;
+    font-family: Menlo; /* Changes the font of the whole page */
+    text-align: center; /* Centers all text */
+    background-color: #252526; /* Light gray background color */
 }
 
 h1 {
-    color: #333;
+    color: #333; /* Dark gray text color for the heading */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: pink;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px;  /* Adds space inside the button (top/bottom, left/right) */
+    background-color: pink; /* Button color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes mouse to pointer when hovering */
 }
