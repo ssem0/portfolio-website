@@ -1,18 +1,31 @@
 /*CSS = “what it looks like” (colors, spacing) */
+
 body {
-    font-family: Menlo; /* Changes the font of the whole page */
+    font-family: Montserrat, Menlo, monospace; /* Changes the font of the whole page */
     text-align: center; /* Centers all text */
-    background-color: #252526; /* Light gray background color */
+    background-color: #252526; /* dark gray background color */
+    transition: all 0.3s ease; /* Smooth transition for theme changes */
+    
+}
+ul.topnav li:first-child {
+    margin-right: auto;
 }
 
-h1 {
-    color: #333; /* Dark gray text color for the heading */
-}
 
 button {
     padding: 10px 20px;  /* Adds space inside the button (top/bottom, left/right) */
-    background-color: pink; /* Button color */
+    background-color: #E37598; /* Button color */
     border: none; /* Removes default border */
     border-radius: 5px; /* Rounds the corners */
     cursor: pointer; /* Changes mouse to pointer when hovering */
 }
+
+.wrapper {
+            padding: 0 15px; /* Adds horizontal padding */
+            max-width: 960px; /* Limits the maximum width of the content */
+            margin: 0 auto; /* Centers the content */
+        }
+        .content {
+            padding: 20px;
+            width: 100%;
+        }
