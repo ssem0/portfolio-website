@@ -1,12 +1,12 @@
 <!-- what exists (text, buttons) -->
-<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document -->
-<html> <!-- Root element of the webpage -->
-<title>My Website</title> <!-- The title shown on the browser tab -->
-<head> <!--container for metadata—data about the document that is not displayed directly on the page-->
-<meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile devices -->
+<!DOCTYPE html>
+<html>
+<title>My Website</title> <!-- title shown on the browser tab -->
+<head>
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- make the page responsive on all devices -->
 <style>
 * {
-box-sizing: border-box; /* Makes width and height include padding and border */
+box-sizing: border-box;
 }
 
 header{
@@ -19,10 +19,11 @@ body{
     color:whitesmoke;
 }
 </style>
-<link rel="stylesheet" href="style.css"> <!-- Links CSS file  -->
+<link rel="stylesheet" href="style.css"> <!-- link css file  -->
 </head>
 
-<body> <!-- Everything inside here shows up on the webpage -->
+<!-- everyth here shows on the page -->
+<body>
 <div class="hero-container">
 <h1 class="fade-in-left">Sophia Sem</h1>
 <button id="exploreButton" class="fade-in-up glow-text explore-link">click to explore</button>
@@ -73,8 +74,3 @@ github: www.github.com/ssem0 </p>
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-<!--width=device-width: Sets the width of the page to follow the screen-width of the device (which will vary depending on the device).-->
-<!--initial-scale=1.0: Sets the initial zoom level when the page is first loade-->
