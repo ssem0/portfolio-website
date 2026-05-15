@@ -1,60 +1,76 @@
-<!-- HTML = “what exists” (text, buttons) -->
+<!-- what exists (text, buttons) -->
 <!DOCTYPE html> <!-- Tells the browser this is an HTML5 document -->
 <html> <!-- Root element of the webpage -->
-     <title>My Website</title> <!-- The title shown on the browser tab -->
+<title>My Website</title> <!-- The title shown on the browser tab -->
 <head> <!--container for metadata—data about the document that is not displayed directly on the page-->
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile devices -->
-    <style>
-        * {
-            box-sizing: border-box; /* Makes width and height include padding and border */
-        }
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile devices -->
+<style>
+* {
+box-sizing: border-box; /* Makes width and height include padding and border */
+}
 
-        ul.topnav {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        ul.topnav li a {
-            display: block;
-            color: white;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        ul.topnav li a:hover {
-            background-color: #FFC9D7;
-        }
-       
-        header{
-            padding: 10px;
+header{
+    padding: 10px;
 
-        }
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        
-    </style>
-    <link rel="stylesheet" href="style.css"> <!-- Links your CSS file to style the page -->
+}
+body{
+    margin: 0;
+    padding: 0;
+    color:whitesmoke;
+}
+</style>
+<link rel="stylesheet" href="style.css"> <!-- Links CSS file  -->
 </head>
 
 <body> <!-- Everything inside here shows up on the webpage -->
+<div class="hero-container">
+<h1 class="fade-in-left">Sophia Sem</h1>
+<button id="exploreButton" class="fade-in-up glow-text explore-link">click to explore</button>
+</div>
 
-    <ul class="topnav">
-        <li><a href="#">⋆. 𐙚˚❀⋆ sophia sem ⋆. ࿔ ˚</a></li>
-        <li><a href="#">home</a></li>
-        <li><a href="#">projects</a></li>
-        <li><a href="#">contact!</a></li>
-    </ul>
-    
-    <p>this site is currently under construction</p>
-   
+<div id="menuOverlay" class="menu-overlay">
+    <button id="closeButton" class="close-x">×</button>
+    <nav>
+        <ul>
+            <li><a href="#about">about me</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+</div>
 
-    <button onclick="sayHello()">Click me</button> <!-- Button that runs a function when clicked -->
+<h1>about me: x</h1>
+<p>Hi! My name is Sophia and I am currently a Senior at the University of Massachusetts Dartmouth pursuing a major in Computer Science. I am interested in xxx. <br>
+I have a passion for learning and am always looking for new opportunities to grow my skills and knowledge in the field of computer science. <br>
+In my free time, I enjoy xxx and xxx. <br>
+</p>
 
-    <script src="script.js"></script> <!-- Links your JavaScript file -->
+<h1>experience</h1>
+<p> millstone medical outsourcing
+ultrasonic operator
+oct 2024-present
+description: x
+manufacturing engineering intern
+description: x
+cleanroom operator
+dec 2023 to aug 2024
+description: x</p>
+<p>skills: Java, Javascript, C, C++, CSS, HTML, Python, Linux</p>
+
+<h1>projects</h1>
+<p> project 1: digital clock </p>
+<p> project 2: personal website </p>
+
+<h1>contact</h1>
+<p> email: ssophiasem@gmail.com <br>
+linkedin: www.linkedin.com/in/ssem0 <br>
+github: www.github.com/ssem0 </p>
+
+
+
+<button onclick="viewResume()">view resume</button>
+<script src="script.js"></script>
 </body>
 </html>
 
