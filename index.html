@@ -1,76 +1,134 @@
-<!-- what exists (text, buttons) -->
 <!DOCTYPE html>
-<html>
-<title>My Website</title> <!-- title shown on the browser tab -->
+<html lang="en">
 <head>
-<meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- make the page responsive on all devices -->
-<style>
-* {
-box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>My Website</title> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+  
+  <link rel="stylesheet" href="style.css"> 
 
-header{
-    padding: 10px;
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-}
-body{
-    margin: 0;
-    padding: 0;
-    color:whitesmoke;
-}
-</style>
-<link rel="stylesheet" href="style.css"> <!-- link css file  -->
+    header {
+      padding: 10px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: whitesmoke;
+      background-color: #0f141c; /* background */
+    }
+
+    .contact-link {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+
+    .resume-link {
+      text-decoration: none;
+    }
+  </style>
 </head>
 
-<!-- everyth here shows on the page -->
 <body>
-<div class="hero-container">
-<h1 class="fade-in-left">Sophia Sem</h1>
-<button id="exploreButton" class="fade-in-up glow-text explore-link">click to explore</button>
-</div>
 
-<div id="menuOverlay" class="menu-overlay">
+  <div class="hero-container">
+    <h1 class="fade-in-left">Sophia Sem</h1>
+    <button id="exploreButton" class="fade-in-up glow-text explore-link">click to explore</button>
+  </div>
+
+  <div id="menuOverlay" class="menu-overlay">
     <button id="closeButton" class="close-x">×</button>
     <nav>
-        <ul>
-            <li><a href="#about">about me</a></li>
-            <li><a href="#experience">experience</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact me!</a></li>
+      </ul>
     </nav>
-</div>
+  </div>
 
-<h1>about me: x</h1>
-<p>Hi! My name is Sophia and I am currently a Senior at the University of Massachusetts Dartmouth pursuing a major in Computer Science. I am interested in xxx. <br>
-I have a passion for learning and am always looking for new opportunities to grow my skills and knowledge in the field of computer science. <br>
-In my free time, I enjoy xxx and xxx. <br>
-</p>
+  <section id="about">
+    <h1>about me</h1>
+    <p>Hi! My name is Sophia and I am a student at University of Massachusetts Dartmouth class of 2027 pursuing a major in Computer Science with a concentration in software engineering. I was introduced to computer science when I took an intro to programming elective in my junior year of high school.
+    Ever since I've had a passion for learning and I am always looking for new opportunities to grow my skills and knowledge in the field of computer science.</p>
 
-<h1>experience</h1>
-<p> millstone medical outsourcing
-ultrasonic operator
-oct 2024-present
-description: x
-manufacturing engineering intern
-description: x
-cleanroom operator
-dec 2023 to aug 2024
-description: x</p>
-<p>skills: Java, Javascript, C, C++, CSS, HTML, Python, Linux</p>
+    <p>In my free time, I enjoy reading (specifically books with movie adaptations), trying new restaurants, and staying active.</p>
+  </section>
 
-<h1>projects</h1>
-<p> project 1: digital clock </p>
-<p> project 2: personal website </p>
+ <section id="education">
+  <h1>education</h1>
+  <div class="terminal-card">
+    
+    <div class="terminal-header">
+      <div class="window-buttons">
+        <span class="btn close"></span>
+        <span class="btn minimize"></span>
+        <span class="btn expand"></span>
+      </div>
+      
+      <div class="terminal-tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'college')">undergrad.json</button>
+        <button class="tab-btn" onclick="switchTab(event, 'highschool')">highschool.json</button>
+      </div>
+    </div>
 
-<h1>contact</h1>
-<p> email: ssophiasem@gmail.com <br>
-linkedin: www.linkedin.com/in/ssem0 <br>
-github: www.github.com/ssem0 </p>
+    <div id="college" class="terminal-body tab-content active-content">
+<pre><code>{
+    <span class="key">"institution"</span>: <span class="string">"University of Massachusetts Dartmouth"</span>,
+    <span class="key">"location"</span>: <span class="string">"North Dartmouth, MA"</span>,
+    <span class="key">"degree"</span>: <span class="string">"Bachelor of Science in Computer Science"</span>,
+    <span class="key">"graduation_year"</span>: <span class="string">"2027"</span>,
+    <span class="key">"focus_areas"</span>: [
+        <span class="string">"Software Engineering"</span>,
+        <span class="string">"Artificial Intelligence"</span>
+  ]
+}</code></pre>
+    </div>
 
+    <div id="highschool" class="terminal-body tab-content">
+<pre><code>{
+  <span class="key">"institution"</span>: <span class="string">"BMC Durfee High School"</span>,
+  <span class="key">"location"</span>: <span class="string">"Fall River, MA"</span>,
+  <span class="key">"graduation_year"</span>: <span class="string">"2023"</span>,
+  <span class="key">"degree"</span>: <span class="string">"High School Diploma"</span>,
+}</code></pre>
+    </div>
 
+  </div>
+</section>
 
-<button onclick="viewResume()">view resume</button>
-<script src="script.js"></script>
+  <section id="experience">
+    <h1>experience</h1>
+    <div class="resume-container">
+      <a href="myresume.pdf" download="sophiasem-resume.pdf" class="resume-link">
+        <button id="resume-button" class="glow-text">download my resume</button>
+      </a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h1>projects</h1>
+    <ul class="project-list">
+      <li><a href="https://ssem0.github.io/digitalclock/" target="_blank" class="glow-text project-link">digital clock</a></li>
+      <li><a href="https://ssem0.github.io/mywebs/" target="_blank" class="glow-text project-link">personal website</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h1>contact me!</h1>
+    <ul class="contact-list">
+      <li><a href="mailto:ssophiasem@gmail.com" class="glow-text contact-link">email</a></li>
+      <li><a href="https://www.linkedin.com/in/ssem0" target="_blank" class="glow-text contact-link">linkedin</a></li>
+      <li><a href="https://www.github.com/ssem0" target="_blank" class="glow-text contact-link">github</a></li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
